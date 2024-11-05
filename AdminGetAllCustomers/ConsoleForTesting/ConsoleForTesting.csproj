@@ -7,8 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\AdminCustomerLibrary\AdminCustomerLibrary.csproj" />
-  </ItemGroup>
-
+	<ItemGroup>
+		<ProjectReference Include="..\AdminCustomerLibrary\AdminCustomerLibrary.csproj" />
+	</ItemGroup>
+	
 </Project>

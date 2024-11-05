@@ -1,5 +1,4 @@
-﻿
-using AdminUserLibrary.ViewModels;
+﻿using AdminUserLibrary.ViewModels;
 using System.Net.Http.Json;
 
 namespace AdminCustomerLibrary;
@@ -26,4 +25,15 @@ public class UserProvider
             return new List<UserViewModel>();
         }
     }
+
+    public List<UserViewModel> GetMockedUsers()
+    {
+        return new List<UserViewModel>
+    {
+        new UserViewModel { Id = "1", UserName = "ggre", UserType = "Admin", IsActive = true },   
+        new UserViewModel { Id = "2", UserName = "bhtdhxhf", UserType = "User", IsActive = false },   
+        new UserViewModel { Id = "3", UserName = "jjiie", UserType = "User", IsActive = true } 
+    };
+    }
+
 }

@@ -7,7 +7,12 @@ using var httpClient = new HttpClient { BaseAddress = new Uri("https://rika-iden
 var userProvider = new UserProvider(httpClient);
 var users = await userProvider.GetAllCustomersAsync();
 
+if (users == null || users.Count == 0)
+{
+    users = userProvider.GetMockedUsers();
+}
+
 foreach (var user in users)
 {
-    Console.WriteLine($"ID: {user.Id}, Name: {user.UserName}, Email: {user.Email}, Phone number {user.PhoneNumber}");
+    Console.WriteLine($"ID: {user.Id}, Name: {user.UserName}, Email: {user.Email}, Phone number: {user.PhoneNumber}, Status: {(user.IsActive ? "Active" : "Inactive")}"); //la till active/inactive
 }
