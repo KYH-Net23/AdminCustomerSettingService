@@ -1,9 +1,9 @@
-﻿using AdminUserLibrary.ViewModels;
+﻿using AdminCustomerLibrary.ViewModels;
 using System.Net.Http.Json;
 
 namespace AdminCustomerLibrary;
 
-public class UserProvider
+public class UserProvider : IUserProvider
 {
     private readonly HttpClient _httpClient;
 
@@ -12,28 +12,40 @@ public class UserProvider
         _httpClient = httpClient;
     }
 
-    public async Task<List<UserViewModel>> GetAllCustomersAsync()
+    public async Task<List<CustomerViewModel>> GetAllCustomersAsync()
     {
         try
         {
-            var users = await _httpClient.GetFromJsonAsync<List<UserViewModel>>("api/Customer/GetAll");
-            return users ?? new List<UserViewModel>();
+            var users = await _httpClient.GetFromJsonAsync<List<CustomerViewModel>>("api/Customer/GetCustomers");
+            return users ?? new List<CustomerViewModel>();
         }
-        catch (Exception ex) 
+        catch (Exception ex)
         {
             Console.WriteLine($"An error occurred: {ex.Message}");
-            return new List<UserViewModel>();
+            return new List<CustomerViewModel>();
         }
     }
-
-    public List<UserViewModel> GetMockedUsers()
+    public async Task<List<AdminViewModel>> GetAllAdminsAsync()
     {
-        return new List<UserViewModel>
-    {
-        new UserViewModel { Id = "1", UserName = "ggre", UserType = "Admin", IsActive = true },   
-        new UserViewModel { Id = "2", UserName = "bhtdhxhf", UserType = "User", IsActive = false },   
-        new UserViewModel { Id = "3", UserName = "jjiie", UserType = "User", IsActive = true } 
-    };
+        try
+        {
+            var users = await _httpClient.GetFromJsonAsync<List<AdminViewModel>>("api/Admin/GetAdmins");
+            return users ?? new List<AdminViewModel>();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred: {ex.Message}");
+            return new List<AdminViewModel>();
+        }
     }
+    //public List<UserViewModel> GetMockedUsers()
+    //{
+    //    return new List<UserViewModel>
+    //{
+    //    new UserViewModel { Id = "1", UserName = "ggre", UserRole = "Admin", IsDeleted = true },   
+    //    new UserViewModel { Id = "2", UserName = "bhtdhxhf", UserRole = "User", IsDeleted = false },   
+    //    new UserViewModel { Id = "3", UserName = "jjiie", UserRole = "User", IsDeleted = true } 
+    //};
+    //}
 
 }
