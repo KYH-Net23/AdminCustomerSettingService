@@ -21,23 +21,6 @@ public class UserProviderTests
         _userProvider = new UserProvider(httpClient);
     }
 
-    //[Fact]
-    //public void GetAllCustomersAsync_ShouldReturnCorrectNumberOfUsers()
-    //{
-
-    //    var userProvider = new UserProvider(new HttpClient());
-    //    int expectedCount = 3;
-
-
-    //    var mockedUsers = GetMockedUsers();
-
-
-    //    Assert.Equal(expectedCount, mockedUsers.Count);
-    //}
-    //new UserViewModel { Id = "1", UserName = "ggre", UserType = "Admin", IsActive = true },   
-    //    new UserViewModel { Id = "2", UserName = "bhtdhxhf", UserType = "User", IsActive = false },   
-    //    new UserViewModel { Id = "3", UserName = "jjiie", UserType = "User", IsActive = true }
-
     [Fact]
     public async Task GetAllCustomersAsync_ReturnsCustomerList_WhenSuccessful()
     {

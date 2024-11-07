@@ -38,14 +38,4 @@ public class UserProvider : IUserProvider
             return new List<AdminViewModel>();
         }
     }
-    //public List<UserViewModel> GetMockedUsers()
-    //{
-    //    return new List<UserViewModel>
-    //{
-    //    new UserViewModel { Id = "1", UserName = "ggre", UserRole = "Admin", IsDeleted = true },   
-    //    new UserViewModel { Id = "2", UserName = "bhtdhxhf", UserRole = "User", IsDeleted = false },   
-    //    new UserViewModel { Id = "3", UserName = "jjiie", UserRole = "User", IsDeleted = true } 
-    //};
-    //}
-
 }
