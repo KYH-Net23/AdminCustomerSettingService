@@ -15,7 +15,7 @@ public class UserProviderTests
         _mockHttpMessageHandler = new Mock<HttpMessageHandler>();
         var httpClient = new HttpClient(_mockHttpMessageHandler.Object)
         {
-            BaseAddress = new Uri("")
+            BaseAddress = new Uri("http://localhost")
         };
 
         _userProvider = new UserProvider(httpClient);
