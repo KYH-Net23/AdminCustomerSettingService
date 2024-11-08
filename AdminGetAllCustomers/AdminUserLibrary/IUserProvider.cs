@@ -1,6 +1,6 @@
-﻿using AdminCustomerLibrary.ViewModels;
+﻿using AdminUserLibrary.ViewModels;
 
-namespace AdminCustomerLibrary
+namespace AdminUserLibrary
 {
     public interface IUserProvider
     {

@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AdminCustomerLibrary\AdminCustomerLibrary.csproj" />
+    <ProjectReference Include="..\AdminUserLibrary\AdminUserLibrary.csproj" />
   </ItemGroup>
 
   <ItemGroup>

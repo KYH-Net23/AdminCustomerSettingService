@@ -1,7 +1,7 @@
-﻿using AdminCustomerLibrary.ViewModels;
+﻿using AdminUserLibrary.ViewModels;
 using System.Net.Http.Json;
 
-namespace AdminCustomerLibrary;
+namespace AdminUserLibrary;
 
 public class UserProvider : IUserProvider
 {

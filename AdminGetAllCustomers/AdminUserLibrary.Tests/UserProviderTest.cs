@@ -1,5 +1,5 @@
-﻿using AdminCustomerLibrary;
-using AdminCustomerLibrary.ViewModels;
+﻿using AdminUserLibrary;
+using AdminUserLibrary.ViewModels;
 using Moq;
 using Moq.Protected;
 using System.Net.Http.Json;

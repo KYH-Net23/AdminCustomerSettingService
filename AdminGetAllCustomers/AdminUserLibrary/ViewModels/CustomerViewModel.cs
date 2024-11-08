@@ -1,6 +1,5 @@
-﻿
+﻿namespace AdminUserLibrary.ViewModels;
 
-namespace AdminCustomerLibrary.ViewModels;
 public class CustomerViewModel
 {
     public string Id { get; set; }
